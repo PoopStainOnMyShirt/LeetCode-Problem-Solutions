@@ -12,12 +12,12 @@ public class Solution {
             {'M', 1000}
         };
 
-        for(int i = 0; i < s.Length; i++)
+        for(int i = 0; i < s.Length - 1; i++)
         {
-            if(i < s.Length - 1 && numMap[s[i]] < numMap[s[i+1]]) res -= numMap[s[i]];
+            if(numMap[s[i]] < numMap[s[i+1]]) res -= numMap[s[i]];
             else res += numMap[s[i]];
         }
 
-        return res;
+        return res+numMap[s[s.Length - 1]];
     }
 }
