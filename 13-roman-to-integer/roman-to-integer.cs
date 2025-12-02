@@ -1,7 +1,22 @@
 public class Solution {
+    private int GetValue (char input)
+    {
+        switch(input)
+        {
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
+        }
+        return 0;
+    }
+    
     public int RomanToInt(string s) {
         int res = 0;
-        Dictionary<char, int> numMap = new Dictionary<char, int>()
+        /*Dictionary<char, int> numMap = new Dictionary<char, int>()
         {
             {'I', 1},
             {'V', 5},
@@ -10,14 +25,14 @@ public class Solution {
             {'C', 100},
             {'D', 500},
             {'M', 1000}
-        };
+        };*/ //Will try to use a switch case to reduce response time
 
         for(int i = 0; i < s.Length - 1; i++)
         {
-            if(numMap[s[i]] < numMap[s[i+1]]) res -= numMap[s[i]];
-            else res += numMap[s[i]];
+            if(GetValue(s[i]) < GetValue(s[i+1])) res -= GetValue(s[i]);
+            else res += GetValue(s[i]);
         }
 
-        return res+numMap[s[s.Length - 1]];
+        return res+GetValue(s[s.Length - 1]);
     }
 }
