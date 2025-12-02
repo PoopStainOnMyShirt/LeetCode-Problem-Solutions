@@ -1,21 +1,15 @@
 public class Solution {
     public bool IsPalindrome(int x) {
         if(x < 0 || (x % 10 == 0 && x != 0)) return false;
-        //STEP: copy x into a temp var
-        int tmp = x;
-        //STEP: while var isnt zero
-        int ctr = 0;
-        int r = 0;
-        while (tmp > 0)
+        //We try to compare two halves instead
+        int reverseHalf = 0;
+        while(reverseHalf < x)
         {
-            //STEP: add a counter starting from zero and a result with initial value 0
-            //STEP: res = temp%10 * (10^count)
-            r *= 10;
-            r += tmp % 10;
-            tmp /= 10;
-            ctr++;
+            reverseHalf *= 10;
+            reverseHalf += x%10;
+
+            x/=10;
         }
-        return (r == x);
-        //STEP: Return res == x
+        return reverseHalf == x || reverseHalf / 10 == x;
     }
 }
