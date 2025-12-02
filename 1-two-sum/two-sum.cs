@@ -8,10 +8,10 @@ public class Solution {
             //Step 2. find complement = target - arr[i]
             int complement = target - nums[i];
             //Step 3. Look through the hashMap to see if we have the complement
-            if(hashMap.ContainsKey(complement))
+            if(hashMap.TryGetValue(complement, out int complementIndex))
             {
                 //Step 4. If found, return. answer is [<i>,<hashMap[complement]>]
-                return new int[] {i, hashMap[complement]};
+                return new int[] {complementIndex, i};
             }
             
             //Step 5. If not found, store in hashMap
