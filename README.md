@@ -1,4 +1,4 @@
-# 🥚 Joyojhyoty's LeetCode Solutions (The Journey Begins!)
+# 🥚 Joyojhyoty's LeetCode Solutions
 
 This repository marks the start of my LeetCode journey!
 
