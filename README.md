@@ -37,11 +37,4 @@ My focus right now is on:
 
 ---
 
-## 🔗 Connect and Learn Together!
-
-If you see a solution that could be cleaner, faster, or more efficient, feel free to open an issue or drop a comment! I'm here to learn.
-
-* **My GitHub Profile:** [Link to your main GitHub profile]
-* **My LinkedIn:** [Link to your LinkedIn]
-
 Happy Coding! 🎉
