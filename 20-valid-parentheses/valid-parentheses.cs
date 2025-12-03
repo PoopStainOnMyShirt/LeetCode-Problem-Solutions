@@ -2,7 +2,6 @@ public class Solution {
     public bool IsValid(string s) {
         Stack<char> stack = new Stack<char>();
         char popped;
-        bool flag = true;
         for(int i = 0; i < s.Length; i++)
         {
             switch(s[i])
