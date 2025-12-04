@@ -14,7 +14,7 @@ public class Solution {
             
             int total_sum = x + y + carry;
 
-            result.Insert(0, total_sum % 2); 
+            result.Append(total_sum % 2); 
             
             carry = total_sum / 2;
             
@@ -22,6 +22,6 @@ public class Solution {
             j--;
         }
 
-        return result.ToString();
+        return string.Join("", result.ToString().Reverse());
     }
 }
