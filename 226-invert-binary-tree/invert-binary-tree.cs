@@ -15,10 +15,9 @@ public class Solution {
     private List<int> root = new List<int>();
     public TreeNode InvertTree(TreeNode root) {
         if(root == null)return root;
-        TreeNode left_inverted = InvertTree(root.left);
-        TreeNode right_inverted = InvertTree(root.right);
-        root.left = right_inverted;
-        root.right = left_inverted;
+        var temp = root.left;
+        root.left = InvertTree(root.right);
+        root.right = InvertTree(temp);
         return root;
     }
 }
