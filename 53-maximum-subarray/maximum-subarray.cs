@@ -8,7 +8,7 @@ public class Solution {
             currentMax = Math.Max(nums[i], currentMax + nums[i]);
             globalMax = Math.Max(globalMax, currentMax);
         }
-        GC.Collect();
+        //GC.Collect();
         return globalMax;
     }
 }
